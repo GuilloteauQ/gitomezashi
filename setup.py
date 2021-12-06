@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     # Application name:
-    name="my_python_app",
+    name="gitomezashi",
 
     # Version number (initial):
     version="0.1.0",
@@ -17,19 +17,19 @@ setup(
     # Include additional files into the package
     # include_package_data=True,
     entry_points={
-        'console_scripts': ['my_python_app=app.my_python_app:main'],
+        'console_scripts': ['gitomezashi=app.gitomezashi:main'],
     },
 
     #
     # license="LICENSE.txt",
-    description="My Python app",
+    description="Hitomezashi Stitch Patterns for git commit hashes",
 
     # long_description=open("README.txt").read(),
 
     # Dependent packages (distributions)
     install_requires=[
-        # "beautifulsoup4",
-        # "ics",
-        # "requests"
+        "GitPython",
+        "svgwrite",
+        "cairosvg"
     ]
 )

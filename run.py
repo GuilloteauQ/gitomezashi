@@ -1,3 +1,3 @@
-from app import my_python_app
+from app import gitomezashi
 
-my_python_app.main()
+gitomezashi.main()
