@@ -8,17 +8,21 @@ Hitomezashi Stitch Patterns for git commit hashes
 
 ## How it works
 
-It takes the commit hash of the head, split it in two
-
 1. we take the commit hash of the head
 
 2. we split it in two (the vertical and horizontal parts)
 
-3. we look bit my bit each part and draw the lines accordingly
+3. we look bit by bit each part and draw the lines accordingly
 
 ## Example
 
 For the commit `c5a274f873ea206a73554a60ed706fc6ab22ac12`, we got the following:
 
 ![Stitch](./commit.png)
+
+## For Nix Users
+
+```sh
+nix shell github:GuilloteauQ/gitomezashi
+```
 
