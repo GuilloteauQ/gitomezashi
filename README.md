@@ -14,6 +14,16 @@ Hitomezashi Stitch Patterns for git commit hashes
 
 3. we look bit by bit each part and draw the lines accordingly
 
+## Usage
+
+```sh
+# for the current repo
+gitomezashi
+
+# or
+gitomezashi [PATH]
+```
+
 ## Example
 
 For the commit `c5a274f873ea206a73554a60ed706fc6ab22ac12`, we got the following:

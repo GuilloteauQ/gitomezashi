@@ -2,6 +2,7 @@
 Hitomezashi Stitch Patterns for git commit hashes
 """
 from git import Repo
+import os
 import cairosvg
 import svgwrite
 import sys
@@ -82,7 +83,11 @@ def main():
     """
     main function
     """
-    repo_path = sys.argv[1]
+    args = sys.argv
+    if len(args) > 1:
+        repo_path = sys.argv[1]
+    else:
+        repo_path = os.getcwd()
     commit_hash = get_hash(repo_path)
     (left, right) = split_hash(commit_hash)
     vertical = hex_to_bin(left)
@@ -98,6 +103,8 @@ def main():
     }
     draw_svg(horizontal, vertical, config)
     cairosvg.svg2png(url=config["filename"], write_to=config["outname"], dpi=config["dpi"])
+    if os.path.exists(config["filename"]):
+        os.remove(config["filename"])
 
     return 0
 
